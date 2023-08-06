@@ -1,1 +1,42 @@
- 
+# to update default branch name in local
+git branch -M master
+
+# do some changes in local
+# commit
+git log --oneline
+# try to push the changes
+# you will see some errors, so change the default branch in local to main
+git branch -M main
+# and push now
+git push # it should work
+
+# add some files in remote repository - in github
+git fetch
+
+# check the log
+git log --oneline --all
+
+# do merge between local and remote
+git merge origin/main
+
+# let us do above fetch and merge in a single command
+# update the remote repo files again and run below command
+git pull
+
+git log --oneline
+
+# to check what changes has been done in each of the commits
+git log --oneline --stat --all 
+
+# to check what changes has been done in each of the commits along with the changes
+git log --oneline --stat --all --patch
+
+# to check the change in a single commit
+git show commit_id
+
+# to check the change in a single commit and particular file
+git show commit_id:file_name
+
+# Removing file
+
+# git clone and pull demo commands
